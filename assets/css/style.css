@@ -6,8 +6,10 @@
     box-sizing: border-box;
 }
 
-.d-flex{ display: flex;
+.d-flex {
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -17,7 +19,7 @@
     margin-right: auto;
     padding-left: 12px;
     padding-right: 12px;
-    
+
 }
 
 .row {
@@ -26,6 +28,7 @@
     flex-wrap: wrap;
     margin-left: -12px;
     margin-right: -12px;
+    overflow: hidden;
 
 }
 
@@ -40,6 +43,8 @@
     width: 270px;
     height: 350px;
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+    position: relative;
+    overflow: hidden;
 
 }
 
@@ -72,4 +77,74 @@
 
 .mt-9 {
     margin-top: 9px;
+}
+
+.box:hover .all-box {
+    right: 0;
+}
+
+.all-box {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 175px;
+    position: absolute;
+    gap: 5px;
+    transform: translateY(-100%);
+    top: 55%;
+    right: -60px;
+
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background: white;
+    box-shadow: 1px 7px 6px rgba(255, 83, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sbox-1 {
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+}
+
+.sbox-2 {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sbox-3 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sbox-4 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.icon-box:hover {
+    background-color: #FF5300;
+    cursor: pointer;
+}
+
+.icon-box:hover span svg path {
+    fill: #fff;
 }
