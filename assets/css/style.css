@@ -14,7 +14,7 @@
 
 .container {
     height: 100vh;
-    max-width: 1140px;
+    width: 1140px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 12px;
@@ -42,9 +42,11 @@
 .box {
     width: 270px;
     height: 350px;
-    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+    background: #FFF;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.10);
     position: relative;
     overflow: hidden;
+    margin-bottom: 3px;
 
 }
 
@@ -90,9 +92,11 @@
     height: 175px;
     position: absolute;
     gap: 5px;
-    transform: translateY(-100%);
-    top: 55%;
+    transform: translateY(-50%);
+    top: 35%;
     right: -60px;
+    transition: all 200ms linear;
+
 
 }
 
@@ -100,10 +104,11 @@
     width: 40px;
     height: 40px;
     background: white;
-    box-shadow: 1px 7px 6px rgba(255, 83, 0, 0.50);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .sbox-1 {
@@ -143,8 +148,80 @@
 .icon-box:hover {
     background-color: #FF5300;
     cursor: pointer;
+    box-shadow: 1px 7px 6px rgba(255, 83, 0, 0.50);
+
 }
 
 .icon-box:hover span svg path {
     fill: #fff;
+}
+
+@media (max-width:992px) {
+    .col-4-lg {
+        width: 33%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .box {
+        height: auto;
+        width: auto;
+        margin: 10px
+    }
+
+    .h-w-auto {
+        height: auto;
+        width: 100%;
+    }
+
+    .container {
+        height: auto;
+    }
+
+}
+
+@media (max-width:768px) {
+    .col-6-md {
+        width: 50%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .box {
+        width: 100%;
+        margin-top: 20px;
+        height: auto;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .h-w-auto {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width:576px) {
+    .col-12-sm {
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .box {
+        height: auto;
+        width: auto;
+    }
+
+    .h-w-auto {
+        height: auto;
+        width: 100%;
+    }
+
+    .container {
+        height: auto;
+    }
+
 }
